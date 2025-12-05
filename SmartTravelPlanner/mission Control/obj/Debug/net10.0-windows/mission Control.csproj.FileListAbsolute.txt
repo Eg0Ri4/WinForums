@@ -1,2 +1,0 @@
-C:\Users\ACER\Desktop\mission Control\mission Control\obj\Debug\net10.0-windows\App.g.cs
-C:\Users\ACER\Desktop\mission Control\mission Control\obj\Debug\net10.0-windows\mission Control_MarkupCompile.cache
