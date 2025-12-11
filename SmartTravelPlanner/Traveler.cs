@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
-using SmartTravelPLanner.Core;
+using SmartTravelPlanner.Core;
 
-namespace SmartTravelPLanner.Core
+namespace SmartTravelPlanner.Core
 {
     public class Traveler : ICloneable
     {
         private string name;
-        private string? currentLocation;
+        private string ? currentLocation;
         private readonly List<string> route = new List<string>();
 
         public Traveler(string name)
@@ -31,14 +31,14 @@ namespace SmartTravelPLanner.Core
             }
 
             char firstChar = location[0];
+            
             if (firstChar >= 'a' && firstChar <= 'z')
-            {
                 firstChar = (char)(firstChar - 32);
-            }
+
             currentLocation = firstChar + location.Substring(1);
         }
 
-        public string? GetLocation()
+        public string ? GetLocation()
         {
             return currentLocation;
         }
@@ -51,9 +51,8 @@ namespace SmartTravelPLanner.Core
         public void AddCity(string city)
         {
             if (string.IsNullOrWhiteSpace(city))
-            {
                 throw new ArgumentException("City name cannot be empty.");
-            }
+
             route.Add(city);
         }
 
@@ -100,9 +99,8 @@ namespace SmartTravelPLanner.Core
         public string? GetNextStop()
         {
             if (route.Count > 0)
-            {
                 return route[0];
-            }
+
             return null;
         }
 
@@ -132,9 +130,8 @@ namespace SmartTravelPLanner.Core
             Traveler copy = new Traveler(this.name);
             copy.SetLocation(this.currentLocation);
             for (int i = 0; i < this.route.Count; i++)
-            {
                 copy.AddCity(this.route[i]);
-            }
+
             return copy;
         }
 
@@ -165,15 +162,13 @@ namespace SmartTravelPLanner.Core
                 string json = File.ReadAllText(filePath);
                 var travelerData = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json)!;
 
-                string? name = travelerData["name"].GetString();
-                string? currentLocation = travelerData["currentLocation"].GetString();
+                string ? name = travelerData["name"].GetString();
+                string ? currentLocation = travelerData["currentLocation"].GetString();
 
                 List<string> route = new List<string>();
                 if (travelerData.ContainsKey("route"))
-                {
                     foreach (var city in travelerData["route"].EnumerateArray())
                         route.Add(city.GetString()!);
-                }
 
                 Traveler traveler = new Traveler(name ?? string.Empty);
                 traveler.SetLocation(currentLocation);
@@ -197,7 +192,7 @@ namespace SmartTravelPLanner.Core
 
         public bool PlanRouteTo(string destination, CityGraph map)
         {
-            string? start;
+            string ? start;
 
             if (!string.IsNullOrEmpty(currentLocation))
                 start = currentLocation;

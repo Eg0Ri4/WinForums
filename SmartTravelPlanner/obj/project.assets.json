@@ -8,19 +8,24 @@
     "net10.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "C:\\Users\\pirsg\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\Desktop\\SmartTravelPlanner\\SmartTravelPlanner\\SmartTravelPlanner.csproj",
+      "projectUniqueName": "C:\\Users\\pirsg\\Desktop\\final\\WinForums\\SmartTravelPlanner\\SmartTravelPlanner.csproj",
       "projectName": "SmartTravelPlanner",
-      "projectPath": "C:\\Users\\ACER\\Desktop\\SmartTravelPlanner\\SmartTravelPlanner\\SmartTravelPlanner.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\Desktop\\SmartTravelPlanner\\SmartTravelPlanner\\obj\\",
+      "projectPath": "C:\\Users\\pirsg\\Desktop\\final\\WinForums\\SmartTravelPlanner\\SmartTravelPlanner.csproj",
+      "packagesPath": "C:\\Users\\pirsg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pirsg\\Desktop\\final\\WinForums\\SmartTravelPlanner\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pirsg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
